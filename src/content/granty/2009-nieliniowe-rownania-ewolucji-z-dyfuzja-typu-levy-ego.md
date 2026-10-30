@@ -1,5 +1,6 @@
 ---
 tytul: "Nieliniowe równania ewolucji z dyfuzją typu Levy'ego"
+tytul_en: "Nonlinear evolution equations with Lévy-type diffusion"
 kod: "Projekt Polonium"
 rodzaj: "ue"
 kierownik: "prof. Piotr Biler"

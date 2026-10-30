@@ -1,5 +1,6 @@
 ---
 tytul: "XXXIV Konferencja z Historii Matematyki"
+tytul_en: "XXXIV Conference on the History of Mathematics"
 poczatek: "2020-05-04"
 koniec: "2020-05-08"
 miejsce: "Będlewo"

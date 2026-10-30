@@ -1,5 +1,6 @@
 ---
 tytul: "XXX Konferencja z Historii Matematyki"
+tytul_en: "XXX Conference on the History of Mathematics"
 poczatek: "2016-05-05"
 koniec: "2016-05-08"
 miejsce: "Będlewo"

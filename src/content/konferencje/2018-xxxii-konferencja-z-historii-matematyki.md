@@ -1,5 +1,6 @@
 ---
 tytul: "XXXII Konferencja z Historii Matematyki"
+tytul_en: "XXXII Conference on the History of Mathematics"
 poczatek: "2018-04-23"
 koniec: "2018-04-27"
 miejsce: "Będlewo"
