@@ -259,6 +259,16 @@ content:
   - name: archiwum_en
     label: 'EN: uwaga pod czasopismami'
     type: text
+  - name: zrodla
+    label: Źródła (techniczne)
+    type: string
+    list: true
+    hidden: true
+  - name: do_uzupelnienia
+    label: Do uzupełnienia (techniczne)
+    type: string
+    list: true
+    hidden: true
 - name: publikacje-wykazy
   label: Publikacje — wykazy prac (lista w HTML)
   description: Jeden plik = jeden rok (podstrona /nauka/publikacje/RRRR). Wykaz w HTML jest opcjonalny — wystarczy PDF w „Publikacje”.
@@ -283,6 +293,20 @@ content:
   - name: uwagi_en
     label: 'EN: uwaga nad listą'
     type: text
+  - name: pochodzenie
+    label: 'Skąd pochodzi wykaz (zdanie nad listą prac; puste = bez zdania)'
+    type: select
+    options:
+      values:
+      - name: pdf
+        label: Wersja tekstowa wykazu z pliku PDF
+      - name: strona
+        label: Przeniesiony z poprzedniej strony
+  - name: zrodla
+    label: Źródła (techniczne)
+    type: string
+    list: true
+    hidden: true
   - name: grupy
     label: Grupy prac (jedna grupa bez nagłówka = zwykła lista)
     type: object
