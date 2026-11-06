@@ -3,6 +3,18 @@ tytul: "Sukcesy naukowe – zestawienie historyczne"
 opis: "Wybrane wyróżnienia, nagrody i stypendia pracowników i absolwentów Instytutu do 2014 roku."
 tytul_en: "Research achievements – historical overview"
 opis_en: "Selected distinctions, prizes and scholarships of the Institute's staff and graduates up to 2014."
+haslo: "Wybrane wyróżnienia do 2014 r."
+haslo_en: "Selected distinctions up to 2014"
+liczby:
+  - n: "32"
+    etykieta: "rodzaje wyróżnień"
+    etykieta_en: "kinds of distinctions"
+  - n: "100"
+    etykieta: "laureatów"
+    etykieta_en: "laureates"
+  - n: "1946"
+    etykieta: "najstarszy wpis"
+    etykieta_en: "earliest entry"
 tresc_en: |
   This overview was carried over from the previous website of the Institute and covers distinctions up to 2014. More recent achievements are listed on the [Achievements](/nauka/sukcesy) page.
 
