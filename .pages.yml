@@ -344,6 +344,28 @@ content:
   - name: opis
     label: Krótki opis (pod tytułem i w Google)
     type: text
+  - name: haslo
+    label: Hasło na banerze (jedna linia; liczby w banerze pokażą się tylko razem z hasłem)
+    type: string
+  - name: liczby
+    label: Liczby pod hasłem na banerze (tylko gdy nie da się ich policzyć z danych)
+    type: object
+    list: true
+    fields:
+    - name: n
+      label: Liczba (np. 8 albo 3 lata)
+      type: string
+      required: true
+    - name: n_en
+      label: 'EN: liczba (puste = jak po polsku)'
+      type: string
+    - name: etykieta
+      label: Podpis
+      type: string
+      required: true
+    - name: etykieta_en
+      label: 'EN: podpis'
+      type: string
   - name: pasek_boczny
     label: 'Prawy pasek: spis „Na tej stronie”, menu działu czy oba (puste = domyślnie tylko spis)'
     type: select
@@ -369,6 +391,9 @@ content:
   - name: opis_en
     label: 'EN: opis'
     type: text
+  - name: haslo_en
+    label: 'EN: hasło na banerze'
+    type: string
   - name: tresc_en
     label: 'EN: treść (Markdown)'
     type: text
