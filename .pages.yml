@@ -74,7 +74,10 @@ content:
   - name: badania_fakty
     label: Ramka „W skrócie” obok tekstu „Badania w Instytucie” (komputer; puste = bez ramki)
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{wartosc} {opis}"
     fields:
     - name: wartosc
       label: Wartość (krótko, np. A+, 8, 1947)
@@ -256,7 +259,10 @@ content:
   - name: lata
     label: Lata (najnowszy na górze)
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{rok}"
     fields:
     - name: rok
       label: Rok
@@ -279,7 +285,10 @@ content:
   - name: czasopisma
     label: Czasopisma
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{nazwa}"
     fields:
     - name: nazwa
       label: Nazwa
@@ -378,7 +387,10 @@ content:
   - name: grupy
     label: Grupy prac (jedna grupa bez nagłówka = zwykła lista)
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{index}. {naglowek}"
     fields:
     - name: naglowek
       label: Nagłówek grupy (np. Artykuły problemowe; puste = bez nagłówka)
@@ -392,7 +404,10 @@ content:
     - name: prace
       label: Prace
       type: object
-      list: true
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{autorzy}: {tytul}{opis}"
       fields:
       - name: autorzy
         label: Autorzy
@@ -492,7 +507,10 @@ content:
   - name: liczby
     label: Liczby pod hasłem na banerze (tylko gdy nie da się ich policzyć z danych)
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{n} {etykieta}"
     fields:
     - name: n
       label: Liczba (np. 8 albo 3 lata)
