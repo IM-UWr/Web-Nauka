@@ -109,9 +109,6 @@ content:
     label: Nazwa konferencji
     type: string
     required: true
-  - name: tytul_en
-    label: 'EN: nazwa (jeśli inna)'
-    type: string
   - name: poczatek
     label: Początek
     type: date
@@ -126,12 +123,22 @@ content:
   - name: miejsce
     label: Miejsce (np. Wrocław, Będlewo)
     type: string
+  - name: body
+    label: Opis (opcjonalnie)
+    type: rich-text
+    options:
+      format: markdown
+      path: public/pliki/konferencje
+  - name: tytul_en
+    label: 'EN: nazwa (jeśli inna)'
+    type: string
   - name: strona
     label: Strona internetowa konferencji
     type: string
   - name: organizatorzy
-    label: Organizatorzy z Instytutu
+    label: Organizatorzy z Instytutu (strona tego pola nie pokazuje; ukryte, dane zostają)
     type: string
+    hidden: true
   - name: zaklad
     label: Zakład (opcjonalnie)
     type: select
@@ -165,12 +172,6 @@ content:
     label: Odwołana
     type: boolean
     default: false
-  - name: body
-    label: Opis (opcjonalnie)
-    type: rich-text
-    options:
-      format: markdown
-      path: public/pliki/konferencje
 - name: granty
   label: Projekty i granty
   type: collection
@@ -193,12 +194,6 @@ content:
     label: Tytuł projektu
     type: string
     required: true
-  - name: tytul_en
-    label: 'EN: tytuł'
-    type: string
-  - name: kod
-    label: Numer (np. 2024/53/N/ST1/02294)
-    type: string
   - name: rodzaj
     label: Źródło finansowania
     type: select
@@ -213,6 +208,23 @@ content:
         label: Wewnętrzne
       - name: inny
         label: Inne
+  - name: rok_od
+    label: Rok rozpoczęcia
+    type: number
+  - name: rok_do
+    label: Rok zakończenia
+    type: number
+  - name: body
+    label: Opis projektu (opcjonalnie; pokazuje się na podstronie projektu pod danymi)
+    type: rich-text
+    options:
+      format: markdown
+  - name: tytul_en
+    label: 'EN: tytuł'
+    type: string
+  - name: kod
+    label: Numer (np. 2024/53/N/ST1/02294)
+    type: string
   - name: program
     label: Program (np. OPUS, SONATA, PRELUDIUM)
     type: string
@@ -222,12 +234,6 @@ content:
   - name: wykonawcy
     label: Wykonawcy
     type: string
-  - name: rok_od
-    label: Rok rozpoczęcia
-    type: number
-  - name: rok_do
-    label: Rok zakończenia
-    type: number
   - name: kwota
     label: Kwota (opcjonalnie)
     type: string
@@ -240,11 +246,6 @@ content:
   - name: strona
     label: Strona projektu
     type: string
-  - name: body
-    label: Opis projektu (opcjonalnie; pokazuje się na podstronie projektu pod danymi)
-    type: rich-text
-    options:
-      format: markdown
 - name: publikacje
   label: Publikacje
   description: 'Strona /nauka/publikacje. Nowy rok: dodaj go na górze listy „Lata” i wgraj PDF. Liczby prac liczą się same z wykazów w HTML (Publikacje — wykazy prac). Tytuł, opis pod tytułem, hasło i tekst strony (także o czasopismach) — Strony → nauka/publikacje.md.'
@@ -432,11 +433,55 @@ content:
     label: Tytuł
     type: string
     required: true
+  - name: body
+    label: Treść
+    type: rich-text
+    options:
+      format: markdown
+      path: public/pliki/nauka
+    description: |-
+      Piszesz jak w zwykłym edytorze; akapity oddziela Enter. Nagłówek 2 = nowa sekcja (pojawi się w spisie „Na tej stronie”).
+
+      Gdy włączone jest pole „Bloki” (niżej), kilka układów strona rozpoznaje sama:
+
+      • Punkt listy zaczynający się pogrubieniem = kafelek.
+
+      • Lista numerowana z pogrubionym początkiem = oś kroków.
+
+      • Punkt z rolą kursywą i nazwiskiem pogrubionym = kontakt.
+
+      • Lista samych linków = lista plików (PDF / strona).
+
+      • Nagłówek 3 zakończony znakiem „?” = rozwijane pytanie.
+
+      • Tekst nad listą (Seminaria, Konferencje, Aktualności…): lista stoi pod całym tekstem, chyba że jest kotwica — np. na stronie Publikacje tekst pod nagłówkiem 2 „Czasopisma redagowane w Instytucie” stoi nad listą czasopism.
+
+      • Plik PDF: wgraj w „Media” i wklej link.
+
+      • Akapit zaczynający się od dwuliterowego skrótu z kropką („Np.”, „Dr.”, „No.”) edytor zapisze jako listę numerowaną „1.” — zacznij akapit inaczej albo pogrub skrót.
+
+      Więcej: ściągawka edytora (dok/sciagawka-edytora.md w Web-Core).
+  - name: tytul_en
+    label: Tytuł EN
+    type: string
+  - name: tresc_en
+    label: Treść EN
+    description: Cała strona po angielsku, w tym samym układzie co Treść (nagłówki sekcji po angielsku). Puste = strona angielska pokaże treść polską.
+    type: rich-text
+    options:
+      format: markdown
+      path: public/pliki/nauka
   - name: opis
     label: Krótki opis (pod tytułem i w Google)
     type: text
+  - name: opis_en
+    label: 'EN: opis'
+    type: text
   - name: haslo
     label: Hasło na banerze (jedna linia; liczby w banerze pokażą się tylko razem z hasłem)
+    type: string
+  - name: haslo_en
+    label: 'EN: hasło na banerze'
     type: string
   - name: haslo_podstron
     label: Hasło na banerze stron pojedynczych wpisów (tylko Publikacje — rocznik, i Obrony doktorskie — obrona)
@@ -476,21 +521,8 @@ content:
         label: Tylko menu działu (podstrony)
       - name: brak
         label: Bez prawego paska (strona na całą szerokość)
-  - name: body
-    label: Treść
-    type: rich-text
-    options:
-      format: markdown
-      path: public/pliki/nauka
-  - name: tytul_en
-    label: 'EN: tytuł'
-    type: string
-  - name: opis_en
-    label: 'EN: opis'
-    type: text
-  - name: haslo_en
-    label: 'EN: hasło na banerze'
-    type: string
-  - name: tresc_en
-    label: 'EN: treść (Markdown)'
-    type: text
+  - name: bloki
+    label: Kafelki, oś i kontakty z list — zob. ściągawka
+    type: boolean
+    default: false
+    description: 'Włączone: listy w treści stają się blokami (kafelki, oś kroków, kontakty, lista plików, rozwijane pytania) — opis przy polu „Treść”. Wyłączone: zwykłe listy.'
