@@ -1,6 +1,4 @@
 {
-  "wstep": "Wykazy publikacji naukowych pracowników Instytutu według roku wydania oraz czasopisma redagowane w Instytucie.",
-  "wstep_en": "Lists of research publications by members of the Institute, by year of publication, and journals edited at the Institute.",
   "lata": [
     {
       "rok": 2025,
@@ -83,8 +81,6 @@
       "rok": 2003
     }
   ],
-  "czasopisma_naglowek": "Czasopisma redagowane w Instytucie",
-  "czasopisma_naglowek_en": "Journals edited at the Institute",
   "czasopisma": [
     {
       "nazwa": "Applicationes Mathematicae",
