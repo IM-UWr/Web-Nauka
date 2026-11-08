@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Model Theory Conference"
 poczatek: "2020-06-21"
 koniec: "2020-06-27"

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Stochastic models V"
 poczatek: "2016-09-11"
 koniec: "2016-09-17"

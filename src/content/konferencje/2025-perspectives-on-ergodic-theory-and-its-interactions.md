@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Perspectives on Ergodic Theory and its Interactions"
 poczatek: "2025-06-23"
 koniec: "2025-06-27"

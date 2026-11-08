@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Stochastic Processes and their Applications"
 poczatek: "2025-07-14"
 koniec: "2025-07-18"

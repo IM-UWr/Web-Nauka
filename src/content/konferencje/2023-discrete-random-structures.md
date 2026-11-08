@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Discrete random structures"
 poczatek: "2023-10-16"
 koniec: "2023-10-20"

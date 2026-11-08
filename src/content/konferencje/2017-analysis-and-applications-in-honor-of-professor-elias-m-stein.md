@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Analysis and Applications: in honor of Professor Elias M. Stein"
 poczatek: "2017-09-04"
 koniec: "2017-09-08"

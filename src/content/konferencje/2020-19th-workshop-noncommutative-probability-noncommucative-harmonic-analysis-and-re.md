@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "19th Workshop: Noncommutative Probability, Noncommucative Harmonic Analysis and Related Topics, with Applications"
 poczatek: "2020-07-05"
 koniec: "2020-07-12"

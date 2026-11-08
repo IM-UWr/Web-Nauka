@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Integration, Vector Measures and Related Topics"
 poczatek: "2014-06-15"
 koniec: "2014-06-21"

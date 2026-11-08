@@ -1,9 +1,6 @@
 {
   "rok": 2014,
   "pochodzenie": "strona",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/prace-opublikowane-w-roku-2014"
-  ],
   "grupy": [
     {
       "prace": [
@@ -294,5 +291,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: Projekty i granty
 tytul_en: Research projects and grants
 tresc_en: |-

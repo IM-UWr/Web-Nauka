@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Conference on Geometric Group Theory"
 poczatek: "2015-06-29"
 koniec: "2015-07-03"

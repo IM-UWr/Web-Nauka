@@ -1,9 +1,6 @@
 {
   "rok": 2021,
   "pochodzenie": "pdf",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/sites/default/files/publikacje_2021.pdf"
-  ],
   "grupy": [
     {
       "prace": [
@@ -454,5 +451,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: Nauka
 tytul_en: Research
 tresc_en: >-

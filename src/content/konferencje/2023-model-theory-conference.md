@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Model Theory Conference"
 poczatek: "2023-09-19"
 koniec: "2023-09-23"

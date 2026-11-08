@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "XIII Forum of Partial Differential Equations"
 poczatek: "2024-06-23"
 koniec: "2024-06-29"

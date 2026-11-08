@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Combinatorics and Groups"
 poczatek: "2016-04-11"
 koniec: "2016-04-14"

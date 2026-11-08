@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "16th Workshop: Non-commutative Harmonic Analysis"
 poczatek: "2014-07-06"
 koniec: "2014-07-12"

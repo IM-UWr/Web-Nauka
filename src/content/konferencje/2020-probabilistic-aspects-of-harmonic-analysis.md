@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Probabilistic Aspects of Harmonic Analysis"
 poczatek: "2020-05-10"
 koniec: "2020-05-16"

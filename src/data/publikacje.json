@@ -2,83 +2,106 @@
   "lata": [
     {
       "rok": 2025,
-      "plik": "/pliki/nauka/publikacje/publikacje_2025.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2025.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2024,
-      "plik": "/pliki/nauka/publikacje/publikacje_2024.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2024.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2023,
-      "plik": "/pliki/nauka/publikacje/publikacje_2023.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2023.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2022,
-      "plik": "/pliki/nauka/publikacje/publikacje_2022.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2022.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2021,
-      "plik": "/pliki/nauka/publikacje/publikacje_2021.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2021.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2020,
-      "plik": "/pliki/nauka/publikacje/publikacje_2020.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2020.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2019,
-      "plik": "/pliki/nauka/publikacje/publikacje_2019.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2019.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2018,
-      "plik": "/pliki/nauka/publikacje/publikacje_2018.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2018.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2017,
-      "plik": "/pliki/nauka/publikacje/publikacje_2017.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2017.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2016,
-      "plik": "/pliki/nauka/publikacje/publikacje_2016.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2016.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
       "rok": 2015,
-      "plik": "/pliki/nauka/publikacje/publikacje_2015.pdf"
+      "plik": "/pliki/nauka/publikacje/publikacje_2015.pdf",
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2014
+      "rok": 2014,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2013
+      "rok": 2013,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2012
+      "rok": 2012,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2011
+      "rok": 2011,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2010
+      "rok": 2010,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2009
+      "rok": 2009,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2008
+      "rok": 2008,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2007
+      "rok": 2007,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2006
+      "rok": 2006,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2005
+      "rok": 2005,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2004
+      "rok": 2004,
+      "status_publikacji": "oficjalna"
     },
     {
-      "rok": 2003
+      "rok": 2003,
+      "status_publikacji": "oficjalna"
     }
   ],
   "czasopisma": [
@@ -90,7 +113,8 @@
       "wydawca_en": "Institute of Mathematics, Polish Academy of Sciences",
       "issn": "1233-7234",
       "eissn": "1730-6280",
-      "adres": "https://impan.pl/en/publishing-house/journals-and-series/applicationes-mathematicae"
+      "adres": "https://impan.pl/en/publishing-house/journals-and-series/applicationes-mathematicae",
+      "status_publikacji": "oficjalna"
     },
     {
       "nazwa": "Colloquium Mathematicum",
@@ -102,7 +126,8 @@
       "redakcja_en": "Institute of Mathematics, University of Wrocław, pl. Grunwaldzki 2/4, 50-384 Wrocław, Poland",
       "issn": "0010-1354",
       "eissn": "1730-6302",
-      "adres": "https://impan.pl/en/publishing-house/journals-and-series/colloquium-mathematicum"
+      "adres": "https://impan.pl/en/publishing-house/journals-and-series/colloquium-mathematicum",
+      "status_publikacji": "oficjalna"
     },
     {
       "nazwa": "Probability and Mathematical Statistics",
@@ -114,21 +139,10 @@
       "wsparcie_en": "Faculty of Mathematics and Computer Science, University of Wrocław, and Faculty of Pure and Applied Mathematics, Wrocław University of Science and Technology",
       "kontakt": "pms@math.uni.wroc.pl",
       "issn": "0208-4147",
-      "adres": "https://www.math.uni.wroc.pl/~pms/"
+      "adres": "https://www.math.uni.wroc.pl/~pms/",
+      "status_publikacji": "oficjalna"
     }
   ],
   "archiwum": "Preprinty Instytutu Matematycznego — seria wydawana do 2000 roku.",
-  "archiwum_en": "Preprints of the Mathematical Institute — a series published until 2000.",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/publikacje",
-    "https://www.math.uni.wroc.pl/redagowane-czasopisma",
-    "https://impan.pl/en/publishing-house/journals-and-series/colloquium-mathematicum",
-    "https://impan.pl/en/publishing-house/journals-and-series/applicationes-mathematicae",
-    "https://www.math.uni.wroc.pl/~pms/pmsins.php"
-  ],
-  "do_uzupelnienia": [
-    "Applicationes Mathematicae: według strony IMPAN redakcja mieści się w Warszawie (IMPAN, ul. Śniadeckich 8) — potwierdzić, czy czasopismo nadal jest redagowane w Instytucie.",
-    "Probability and Mathematical Statistics: strona czasopisma działa na serwerze starej strony (math.uni.wroc.pl/~pms) — sprawdzić adres po wyłączeniu starej strony.",
-    "Preprinty IM: dawny adres math.uni.wroc.pl/mathbank/preprinty/ już nie działa (404); jeśli seria jest gdzieś zarchiwizowana, dodać link."
-  ]
+  "archiwum_en": "Preprints of the Mathematical Institute — a series published until 2000."
 }

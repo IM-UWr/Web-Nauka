@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Sukcesy naukowe – zestawienie historyczne"
 opis: "Wybrane wyróżnienia, nagrody i stypendia pracowników i absolwentów Instytutu do 2014 roku."
 tytul_en: "Research achievements – historical overview"

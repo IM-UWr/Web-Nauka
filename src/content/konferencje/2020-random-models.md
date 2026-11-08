@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Random Models"
 poczatek: "2020-04-19"
 koniec: "2020-04-22"

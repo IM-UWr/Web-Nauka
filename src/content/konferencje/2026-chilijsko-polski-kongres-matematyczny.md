@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Chilijsko-polski Kongres Matematyczny"
 tytul_en: "Chilean-Polish Mathematical Meeting"
 poczatek: "2026-09-07"

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "20th Workshop: Noncommutative Probability, Operator Algebras and Related Topics, with Applications"
 poczatek: "2025-07-06"
 koniec: "2025-07-12"

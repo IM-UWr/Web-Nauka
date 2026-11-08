@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "7th Euro-Japanese Workshop on Blow-up"
 poczatek: "2016-09-04"
 koniec: "2016-09-09"

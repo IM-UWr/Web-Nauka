@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Mathematics of pattern formation"
 poczatek: "2016-09-11"
 koniec: "2016-09-16"

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Kazimierz Urbanik (1930-2005)"
 poczatek: "2015-05-22"
 koniec: "2015-05-23"

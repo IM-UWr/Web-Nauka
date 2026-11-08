@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Forum on Partial Differential Equations XI"
 poczatek: "2019-06-23"
 koniec: "2019-06-29"

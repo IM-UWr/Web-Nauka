@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Winter School in Abstract Analysis 2015"
 poczatek: "2015-01-31"
 koniec: "2015-02-07"

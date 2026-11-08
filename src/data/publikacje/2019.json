@@ -1,9 +1,6 @@
 {
   "rok": 2019,
   "pochodzenie": "pdf",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/sites/default/files/publikacje_2019.pdf"
-  ],
   "grupy": [
     {
       "naglowek": "Monografie",
@@ -486,5 +483,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

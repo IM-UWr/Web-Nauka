@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Contemporary Harmonic Analysis and its Synergies"
 poczatek: "2024-08-01"
 koniec: "2024-09-30"

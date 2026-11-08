@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Workshop in set theory"
 poczatek: "2014-09-14"
 koniec: "2014-09-17"

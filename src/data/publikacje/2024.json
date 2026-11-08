@@ -1,9 +1,6 @@
 {
   "rok": 2024,
   "pochodzenie": "pdf",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/sites/default/files/publikacje_2024.pdf"
-  ],
   "grupy": [
     {
       "prace": [
@@ -324,5 +321,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

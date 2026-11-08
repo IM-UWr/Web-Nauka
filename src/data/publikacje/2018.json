@@ -1,9 +1,6 @@
 {
   "rok": 2018,
   "pochodzenie": "pdf",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/sites/default/files/publikacje_2018.pdf"
-  ],
   "grupy": [
     {
       "naglowek": "Rozdziały w książkach – opracowania problemowe",
@@ -621,5 +618,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

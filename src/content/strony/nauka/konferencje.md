@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: Konferencje
 tytul_en: Conferences
 tresc_en: |-

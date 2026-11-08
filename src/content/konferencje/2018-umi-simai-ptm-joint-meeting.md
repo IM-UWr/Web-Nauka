@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "UMI-SIMAI-PTM Joint Meeting"
 poczatek: "2018-09-17"
 koniec: "2018-09-20"

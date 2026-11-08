@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "7th Young Set Theory Workshop"
 poczatek: "2014-05-11"
 koniec: "2014-05-17"

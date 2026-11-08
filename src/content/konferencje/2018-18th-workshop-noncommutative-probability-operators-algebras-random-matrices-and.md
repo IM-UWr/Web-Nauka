@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "18th Workshop: Noncommutative Probability, Operators Algebras, Random Matrices and Related Topics, with Applications"
 poczatek: "2018-07-15"
 koniec: "2018-07-21"

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "9th Euro-Japanese Workshop on Blow-up"
 poczatek: "2020-06-28"
 koniec: "2020-07-03"

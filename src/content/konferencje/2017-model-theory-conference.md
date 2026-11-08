@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Model Theory Conference"
 poczatek: "2017-07-02"
 koniec: "2017-07-08"

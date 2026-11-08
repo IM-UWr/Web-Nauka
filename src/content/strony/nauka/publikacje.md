@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: Publikacje
 tytul_en: Publications
 tresc_en: |-

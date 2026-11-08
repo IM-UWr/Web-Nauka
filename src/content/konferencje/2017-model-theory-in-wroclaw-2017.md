@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Model Theory in Wrocław 2017"
 poczatek: "2017-06-30"
 koniec: "2017-07-02"

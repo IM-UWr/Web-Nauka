@@ -1,9 +1,6 @@
 {
   "rok": 2012,
   "pochodzenie": "strona",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/prace-opublikowane-w-roku-2012"
-  ],
   "uwagi": "W oryginalnym wykazie część prac była powtórzona przy nazwiskach kolejnych współautorów; powtórzenia pominięto.",
   "uwagi_en": "In the original list some papers were repeated under the names of further co-authors; the repetitions have been omitted.",
   "grupy": [
@@ -395,5 +392,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Automata theory: from Mathematics to Application"
 kod: "Program ESF (European Science Foundation)"
 rodzaj: "ue"

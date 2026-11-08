@@ -1,9 +1,6 @@
 {
   "rok": 2013,
   "pochodzenie": "strona",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/prace-opublikowane-w-roku-2013"
-  ],
   "grupy": [
     {
       "prace": [
@@ -359,5 +356,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

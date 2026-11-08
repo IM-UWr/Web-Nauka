@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Discrete Random Structures II"
 poczatek: "2026-05-17"
 koniec: "2026-05-22"

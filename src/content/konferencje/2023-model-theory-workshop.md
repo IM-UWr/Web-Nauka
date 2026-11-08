@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Model Theory Workshop"
 poczatek: "2023-09-15"
 koniec: "2023-09-18"

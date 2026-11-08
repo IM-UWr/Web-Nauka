@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Ph.D. Programme: Mathematical Methods in Natural Sciences"
 rodzaj: "ue"
 kierownik: "prof. Piotr Biler, prof. Grzegorz Karch"

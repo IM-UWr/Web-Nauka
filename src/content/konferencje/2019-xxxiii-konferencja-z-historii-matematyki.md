@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "XXXIII Konferencja z Historii Matematyki"
 tytul_en: "XXXIII Conference on the History of Mathematics"
 poczatek: "2019-05-27"

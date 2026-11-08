@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "XXX Konferencja z Historii Matematyki"
 tytul_en: "XXX Conference on the History of Mathematics"
 poczatek: "2016-05-05"

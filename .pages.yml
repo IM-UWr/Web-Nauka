@@ -1,5 +1,4 @@
-# Pages CMS — Web-Nauka: Nauka: konferencje, projekty i granty, publikacje, sukcesy.
-# Wygenerowane przy migracji z Avean/IM-Website-test; pola „Opublikowany” usunięte (bez wersji roboczych).
+# Pages CMS — formularze aktualnej strony Instytutu Matematycznego UWr.
 media:
   input: public/pliki
   output: /pliki
@@ -10,7 +9,8 @@ settings:
 content:
 - name: strona-dzialu
   label: Strona działu Nauka
-  description: 'Strona /nauka: tytuł i tekst „Badania w Instytucie” (po polsku i po angielsku), niżej drobne pola — tekst pod tytułem, hasło i „W skrócie”. Liczby, kafelki (z menu „Nauka”), zakłady, konferencje, granty i obrony budują się same z danych.'
+  description: Tekst strony działu Nauka, opis do wyszukiwarek, hasło i ramka W skrócie. Zestawienia powstają z
+    pozostałych treści.
   type: file
   path: src/data/nauka.md
   format: yaml-frontmatter
@@ -19,32 +19,23 @@ content:
     label: Tytuł
     type: string
     required: true
+    description: Nazwa strony lub wpisu, widoczna także na odpowiednich listach i w wynikach wyszukiwania.
+  - name: status_publikacji
+    label: Status publikacji
+    type: select
+    required: true
+    default: oficjalna
+    description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+    options:
+      values:
+      - name: oficjalna
+        label: Opublikowana — strona oficjalna i podgląd
+      - name: podglad
+        label: Tylko podgląd
   - name: body
     label: Treść
-    description: |-
-      Tekst sekcji „Badania w Instytucie” (pierwszy akapit strona pokazuje większą czcionką).
-
-      Piszesz jak w zwykłym edytorze; akapity oddziela Enter. Nagłówek 2 = nowa sekcja (pojawi się w spisie „Na tej stronie”).
-
-      Kilka układów strona rozpoznaje sama:
-
-      • Punkt listy zaczynający się pogrubieniem = kafelek.
-
-      • Lista numerowana z pogrubionym początkiem = oś kroków.
-
-      • Punkt z rolą kursywą i nazwiskiem pogrubionym = kontakt.
-
-      • Lista samych linków = lista plików (PDF / strona).
-
-      • Nagłówek 3 zakończony znakiem „?” = rozwijane pytanie.
-
-      • Tekst nad listą (Seminaria, Konferencje, Aktualności…): lista stoi pod całym tekstem, chyba że jest kotwica — np. na stronie Publikacje tekst pod nagłówkiem 2 „Czasopisma redagowane w Instytucie” stoi nad listą czasopism.
-
-      • Plik PDF: wgraj w „Media” i wklej link.
-
-      • Akapit zaczynający się od dwuliterowego skrótu z kropką („Np.”, „Dr.”, „No.”) edytor zapisze jako listę numerowaną „1.” — zacznij akapit inaczej albo pogrub skrót.
-
-      Więcej: ściągawka edytora (dok/sciagawka-edytora.md w Web-Core).
+    description: Tekst strony. Nagłówek 2 tworzy sekcję; listy z pogrubionym początkiem tworzą bloki cech lub etapów,
+      a nagłówek 3 zakończony pytajnikiem — rozwijane pytanie.
     type: rich-text
     options:
       format: markdown
@@ -52,45 +43,56 @@ content:
   - name: tytul_en
     label: Tytuł EN
     type: string
+    description: Angielska wersja pola Tytuł; puste oznacza użycie wersji polskiej.
   - name: tresc_en
     label: Treść EN
     type: rich-text
     options:
       format: markdown
       path: public/pliki/nauka
-    description: Tekst „Badania w Instytucie” po angielsku, w tym samym układzie co Treść. Puste = strona angielska pokaże tekst polski.
+    description: Tekst strony po angielsku; puste oznacza wyświetlanie tekstu polskiego. Układ treści jest taki
+      sam jak w polskim opisie.
   - name: wstep
-    label: Wstęp pod tytułem (1–3 zdania)
+    label: Opis do wyszukiwarek
     type: text
+    description: Opis strony do wyszukiwarek i udostępniania linków; nagłówek nowej strony nie pokazuje tego akapitu.
   - name: wstep_en
-    label: 'EN: wstęp'
+    label: Opis do wyszukiwarek EN
     type: text
+    description: Angielska wersja pola Opis do wyszukiwarek; puste oznacza użycie wersji polskiej.
   - name: haslo
-    label: Hasło na banerze (jedna linia; liczby w banerze pokażą się tylko razem z hasłem)
+    label: Hasło w nagłówku
     type: string
+    description: Krótkie hasło w nagłówku, widoczne razem z liczbami. Na okładce działu służy również jako podpis.
   - name: haslo_en
     label: 'EN: hasło na banerze'
     type: string
+    description: Angielska wersja hasła; puste oznacza użycie wersji polskiej.
   - name: badania_fakty
     label: Ramka „W skrócie” obok tekstu „Badania w Instytucie” (komputer; puste = bez ramki)
     type: object
     list:
       collapsible:
         collapsed: true
-        summary: "{wartosc} {opis}"
+        summary: '{wartosc} {opis}'
     fields:
     - name: wartosc
       label: Wartość (krótko, np. A+, 8, 1947)
       type: string
+      description: Krótka wartość, np. 6 semestrów lub A+.
     - name: wartosc_en
       label: 'EN: wartość (puste = jak po polsku, np. liczby i lata)'
       type: string
+      description: Angielska wersja pola Wartość (krótko, np. A+, 8, 1947); puste oznacza użycie wersji polskiej.
     - name: opis
       label: Opis pod wartością
       type: string
+      description: Krótki opis używany na stronie lub w jej zapowiedzi.
     - name: opis_en
       label: 'EN: opis'
       type: string
+      description: Angielska wersja pola Opis pod wartością; puste oznacza użycie wersji polskiej.
+    description: Wartości i opisy w ramce W skrócie przy tekście o badaniach.
 - name: konferencje
   label: Konferencje
   type: collection
@@ -104,49 +106,61 @@ content:
     - tytul
     - poczatek
     - miejsce
+    - status_publikacji
     primary: tytul
-    sort: poczatek
-    order: desc
+    sort:
+    - poczatek
+    default:
+      sort: poczatek
+      order: desc
   fields:
   - name: tytul
     label: Nazwa konferencji
     type: string
     required: true
+    description: Nazwa strony lub wpisu, widoczna także na odpowiednich listach i w wynikach wyszukiwania.
+  - name: status_publikacji
+    label: Status publikacji
+    type: select
+    required: true
+    default: oficjalna
+    description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+    options:
+      values:
+      - name: oficjalna
+        label: Opublikowana — strona oficjalna i podgląd
+      - name: podglad
+        label: Tylko podgląd
   - name: poczatek
     label: Początek
     type: date
     required: true
     options:
       format: yyyy-MM-dd
+    description: Pierwszy dzień konferencji lub zajęć.
   - name: koniec
     label: Koniec
     type: date
     options:
       format: yyyy-MM-dd
+    description: Ostatni dzień; puste przy konferencji oznacza jeden dzień.
   - name: miejsce
     label: Miejsce (np. Wrocław, Będlewo)
     type: string
-  - name: body
-    label: Opis (opcjonalnie)
-    type: rich-text
-    options:
-      format: markdown
-      path: public/pliki/konferencje
+    description: Miejsce wydarzenia wyświetlane przy terminie.
   - name: tytul_en
     label: 'EN: nazwa (jeśli inna)'
     type: string
+    description: Angielska wersja pola Nazwa konferencji; puste oznacza użycie wersji polskiej.
   - name: strona
     label: Strona internetowa konferencji
     type: string
-  - name: organizatorzy
-    label: Organizatorzy z Instytutu (strona tego pola nie pokazuje; ukryte, dane zostają)
-    type: string
-    hidden: true
+    description: Pełny adres strony zewnętrznej, do której prowadzi link.
   - name: zaklad
     label: Zakład (opcjonalnie)
     type: select
     options:
-      values: &id001
+      values:
       - name: algebra-i-teoria-modeli
         label: Zakład Algebry i Teorii Modeli
       - name: analiza-funkcjonalna
@@ -165,16 +179,21 @@ content:
         label: Zakład Teorii Mnogości i Topologii
       - name: teoria-prawdopodobienstwa
         label: Zakład Teorii Prawdopodobieństwa
-    description: (lista z innego repozytorium — nowa pozycja wymaga dopisania w konfiguracji)
-  - name: zdjecie
-    label: Plakat lub zdjęcie (opcjonalnie)
-    type: image
-    options:
-      path: public/pliki/konferencje
+    description: Powiązanie ze stroną zakładu. Lista pochodzi z Web-Instytut; dodanie zakładu wymaga uzupełnienia
+      listy wyboru.
   - name: odwolana
     label: Odwołana
     type: boolean
     default: false
+    description: Oznacza konferencję jako odwołaną i pomija ją w kalendarzu oraz statystykach odbywanych konferencji.
+  - name: opublikowany
+    label: Dotychczasowe uwzględnianie w zestawieniach
+    type: boolean
+    hidden: true
+    default: true
+    description: Zachowuje dotychczasową widoczność w zestawieniach i indeksowanie. To osobna opcja od statusu publikacji.
+  description: Lista konferencji, kalendarz oraz zestawienia na stronach Nauki i zakładów. Tytuł prowadzi na podany
+    adres zewnętrzny; konferencja nie ma osobnej podstrony.
 - name: granty
   label: Projekty i granty
   type: collection
@@ -189,14 +208,31 @@ content:
     - kierownik
     - rok_od
     - rodzaj
+    - status_publikacji
     primary: tytul
-    sort: rok_od
-    order: desc
+    sort:
+    - rok_od
+    default:
+      sort: rok_od
+      order: desc
   fields:
   - name: tytul
     label: Tytuł projektu
     type: string
     required: true
+    description: Nazwa strony lub wpisu, widoczna także na odpowiednich listach i w wynikach wyszukiwania.
+  - name: status_publikacji
+    label: Status publikacji
+    type: select
+    required: true
+    default: oficjalna
+    description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+    options:
+      values:
+      - name: oficjalna
+        label: Opublikowana — strona oficjalna i podgląd
+      - name: podglad
+        label: Tylko podgląd
   - name: rodzaj
     label: Źródło finansowania
     type: select
@@ -211,47 +247,87 @@ content:
         label: Wewnętrzne
       - name: inny
         label: Inne
+    description: Wybór określa oznaczenie i miejsce wpisu na listach.
   - name: rok_od
     label: Rok rozpoczęcia
     type: number
+    description: Pierwszy rok realizacji projektu.
   - name: rok_do
     label: Rok zakończenia
     type: number
+    description: Ostatni rok realizacji; z niego strona ustala, czy projekt trwa.
   - name: body
     label: Opis projektu (opcjonalnie; pokazuje się na podstronie projektu pod danymi)
     type: rich-text
     options:
       format: markdown
+    description: Tekst strony. Nagłówek 2 tworzy sekcję; listy z pogrubionym początkiem tworzą bloki cech lub etapów,
+      a nagłówek 3 zakończony pytajnikiem — rozwijane pytanie.
   - name: tytul_en
     label: 'EN: tytuł'
     type: string
+    description: Angielska wersja pola Tytuł projektu; puste oznacza użycie wersji polskiej.
   - name: kod
     label: Numer (np. 2024/53/N/ST1/02294)
     type: string
+    description: Numer projektu wyświetlany przy jego tytule.
   - name: program
     label: Program (np. OPUS, SONATA, PRELUDIUM)
     type: string
+    description: Nazwa programu finansowania, np. OPUS.
   - name: kierownik
     label: Kierownik
     type: string
+    description: Imię i nazwisko kierownika; dopasowanie do spisu pozwala pokazać kontakt i zakład.
   - name: wykonawcy
     label: Wykonawcy
     type: string
+    description: Osoby realizujące projekt, wyświetlane na jego stronie.
   - name: kwota
     label: Kwota (opcjonalnie)
     type: string
+    description: Kwota i waluta finansowania wyświetlane na stronie projektu.
   - name: zaklad
     label: Zakład (puste = zakład kierownika ze spisu pracowników)
     type: select
     options:
-      values: *id001
-    description: (lista z innego repozytorium — nowa pozycja wymaga dopisania w konfiguracji)
+      values:
+      - name: algebra-i-teoria-modeli
+        label: Zakład Algebry i Teorii Modeli
+      - name: analiza-funkcjonalna
+        label: Zakład Analizy Funkcjonalnej
+      - name: analiza-matematyczna
+        label: Zakład Analizy Matematycznej
+      - name: dydaktyka
+        label: Pracownia Dydaktyki i Popularyzacji Matematyki
+      - name: geometria
+        label: Zakład Geometrii
+      - name: rownania-rozniczkowe
+        label: Zakład Równań Różniczkowych
+      - name: statystyka
+        label: Zakład Statystyki
+      - name: teoria-mnogosci-i-topologia
+        label: Zakład Teorii Mnogości i Topologii
+      - name: teoria-prawdopodobienstwa
+        label: Zakład Teorii Prawdopodobieństwa
+    description: Powiązanie ze stroną zakładu. Lista pochodzi z Web-Instytut; dodanie zakładu wymaga uzupełnienia
+      listy wyboru.
   - name: strona
     label: Strona projektu
     type: string
+    description: Pełny adres strony zewnętrznej, do której prowadzi link.
+  - name: opublikowany
+    label: Dotychczasowe uwzględnianie w zestawieniach
+    type: boolean
+    hidden: true
+    default: true
+    description: Zachowuje dotychczasową widoczność w zestawieniach i indeksowanie. To osobna opcja od statusu publikacji.
+  description: Projekty na liście grantów, własnych podstronach i stronach zakładów. Stan projektu wynika z roku
+    zakończenia.
 - name: publikacje
   label: Publikacje
-  description: 'Strona /nauka/publikacje. Nowy rok: dodaj go na górze listy „Lata” i wgraj PDF. Liczby prac liczą się same z wykazów w HTML (Publikacje — wykazy prac). Tytuł, opis pod tytułem, hasło i tekst strony (także o czasopismach) — Strony → nauka/publikacje.md.'
+  description: Roczniki i czasopisma na stronie Publikacje. PDF dodaj przy roku; tekstowy wykaz prac edytuj w formularzu
+    Wykazy prac.
   type: file
   path: src/data/publikacje.json
   format: json
@@ -262,93 +338,131 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: "{rok}"
+        summary: '{rok}'
     fields:
     - name: rok
       label: Rok
       type: number
       required: true
+      description: Rok lub krótki zapis lat wyświetlany przy pozycji.
+    - name: status_publikacji
+      label: Status publikacji
+      type: select
+      required: true
+      default: oficjalna
+      description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+      options:
+        values:
+        - name: oficjalna
+          label: Opublikowana — strona oficjalna i podgląd
+        - name: podglad
+          label: Tylko podgląd
     - name: plik
       label: Wykaz (PDF)
       type: file
       options:
         path: public/pliki/nauka/publikacje
+      description: Wgraj plik albo wybierz już dostępny; na stronie pojawi się odnośnik.
     - name: link
       label: Albo link do wykazu (https://…), gdy nie ma PDF
       type: string
+      description: Adres przycisku lub powiązanej strony.
     - name: uwagi
       label: Uwaga na karcie roku (opcjonalnie)
       type: string
+      description: Dodatkowa uwaga wyświetlana przy tym elemencie.
     - name: uwagi_en
       label: 'EN: uwaga'
       type: string
+      description: Angielska wersja pola Uwaga na karcie roku (opcjonalnie); puste oznacza użycie wersji polskiej.
+    description: Roczniki na liście publikacji; każdy może zawierać PDF lub adres do wykazu.
   - name: czasopisma
     label: Czasopisma
     type: object
     list:
       collapsible:
         collapsed: true
-        summary: "{nazwa}"
+        summary: '{nazwa}'
     fields:
     - name: nazwa
       label: Nazwa
       type: string
       required: true
+      description: Nazwa wyświetlana na stronie i powiązanych listach.
+    - name: status_publikacji
+      label: Status publikacji
+      type: select
+      required: true
+      default: oficjalna
+      description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+      options:
+        values:
+        - name: oficjalna
+          label: Opublikowana — strona oficjalna i podgląd
+        - name: podglad
+          label: Tylko podgląd
     - name: opis
       label: Opis
       type: text
+      description: Krótki opis używany na stronie lub w jej zapowiedzi.
     - name: opis_en
       label: 'EN: opis'
       type: text
+      description: Angielska wersja pola Opis; puste oznacza użycie wersji polskiej.
     - name: wydawca
       label: Wydawca
       type: string
+      description: Wydawca czasopisma.
     - name: wydawca_en
       label: 'EN: wydawca'
       type: string
+      description: Angielska wersja pola Wydawca; puste oznacza użycie wersji polskiej.
     - name: wsparcie
       label: Wsparcie (np. współfinansujące wydziały)
       type: string
+      description: Informacja o wsparciu czasopisma przez Instytut.
     - name: wsparcie_en
       label: 'EN: wsparcie'
       type: string
+      description: Angielska wersja pola Wsparcie (np. współfinansujące wydziały); puste oznacza użycie wersji polskiej.
     - name: redakcja
       label: Adres redakcji
       type: string
+      description: Skład lub opis redakcji czasopisma.
     - name: redakcja_en
       label: 'EN: adres redakcji'
       type: string
+      description: Angielska wersja pola Adres redakcji; puste oznacza użycie wersji polskiej.
     - name: kontakt
       label: E-mail redakcji
       type: string
+      description: E-mail wyświetlany przy koordynatorach seminarium.
     - name: issn
       label: ISSN (druk)
       type: string
+      description: Numer ISSN drukowanego czasopisma.
     - name: eissn
       label: eISSN (online)
       type: string
+      description: Numer ISSN elektronicznego czasopisma.
     - name: adres
       label: Strona czasopisma (https://…)
       type: string
+      description: Adres naszej strony zaczyna się od /; zewnętrzny od https://.
+    description: Czasopisma prezentowane na stronie Publikacje.
   - name: archiwum
     label: Uwaga pod czasopismami (np. o dawnych seriach)
     type: text
+    description: Adres archiwalnych materiałów, dostępny jako link na stronie.
   - name: archiwum_en
     label: 'EN: uwaga pod czasopismami'
     type: text
-  - name: zrodla
-    label: Źródła (techniczne)
-    type: string
-    list: true
-    hidden: true
-  - name: do_uzupelnienia
-    label: Do uzupełnienia (techniczne)
-    type: string
-    list: true
-    hidden: true
+    description: Angielska wersja pola Uwaga pod czasopismami (np. o dawnych seriach); puste oznacza użycie wersji
+      polskiej.
 - name: publikacje-wykazy
   label: Publikacje — wykazy prac (lista w HTML)
-  description: Jeden plik = jeden rok (podstrona /nauka/publikacje/RRRR). Wykaz w HTML jest opcjonalny — wystarczy PDF w „Publikacje”.
+  description: Jeden rocznik publikacji w postaci tekstowej. Rok określa nazwę nowego pliku i adres podstrony. Sam
+    PDF można dodać w formularzu Publikacje.
   type: collection
   path: src/data/publikacje
   format: json
@@ -356,20 +470,39 @@ content:
   view:
     fields:
     - rok
+    - status_publikacji
     primary: rok
-    sort: rok
-    order: desc
+    sort:
+    - rok
+    default:
+      sort: rok
+      order: desc
   fields:
   - name: rok
     label: Rok
     type: number
     required: true
+    description: Rok lub krótki zapis lat wyświetlany przy pozycji.
+  - name: status_publikacji
+    label: Status publikacji
+    type: select
+    required: true
+    default: oficjalna
+    description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+    options:
+      values:
+      - name: oficjalna
+        label: Opublikowana — strona oficjalna i podgląd
+      - name: podglad
+        label: Tylko podgląd
   - name: uwagi
     label: Uwaga nad listą (opcjonalnie)
     type: text
+    description: Dodatkowa uwaga wyświetlana przy tym elemencie.
   - name: uwagi_en
     label: 'EN: uwaga nad listą'
     type: text
+    description: Angielska wersja pola Uwaga nad listą (opcjonalnie); puste oznacza użycie wersji polskiej.
   - name: pochodzenie
     label: Skąd pochodzi wykaz (zdanie nad listą prac; puste = bez zdania)
     type: select
@@ -379,61 +512,70 @@ content:
         label: Wersja tekstowa wykazu z pliku PDF
       - name: strona
         label: Przeniesiony z poprzedniej strony
-  - name: zrodla
-    label: Źródła (techniczne)
-    type: string
-    list: true
-    hidden: true
+    description: Nota na stronie rocznika wyjaśniająca pochodzenie tekstowego wykazu.
   - name: grupy
     label: Grupy prac (jedna grupa bez nagłówka = zwykła lista)
     type: object
     list:
       collapsible:
         collapsed: true
-        summary: "{index}. {naglowek}"
+        summary: '{index}. {naglowek}'
     fields:
     - name: naglowek
       label: Nagłówek grupy (np. Artykuły problemowe; puste = bez nagłówka)
       type: string
+      description: Tytuł grupy wyświetlany nad jej pozycjami.
     - name: naglowek_en
       label: 'EN: nagłówek grupy'
       type: string
+      description: Angielska wersja pola Nagłówek grupy (np. Artykuły problemowe; puste = bez nagłówka); puste oznacza
+        użycie wersji polskiej.
     - name: rok_wydania
       label: Rok wydania, jeśli inny niż rok wykazu
       type: number
+      description: Wpisz, gdy rok tej grupy jest inny od roku całego wykazu.
     - name: prace
       label: Prace
       type: object
       list:
         collapsible:
           collapsed: true
-          summary: "{autorzy}: {tytul}{opis}"
+          summary: '{autorzy}: {tytul}{opis}'
       fields:
       - name: autorzy
         label: Autorzy
         type: string
+        description: Autorzy publikacji w zapisie bibliograficznym.
       - name: tytul
         label: Tytuł
         type: string
+        description: Nazwa strony lub wpisu, widoczna także na odpowiednich listach i w wynikach wyszukiwania.
       - name: zrodlo
         label: Czasopismo / wydawnictwo, rok, tom, strony
         type: string
+        description: Czasopismo, tom, strony lub inne dane bibliograficzne.
       - name: opis
         label: Opis w jednym polu (gdy tytułu i źródła nie da się rozdzielić)
         type: string
+        description: Krótki opis używany na stronie lub w jej zapowiedzi.
       - name: doi
         label: DOI (np. 10.1016/j.jfa.2025.111082)
         type: string
+        description: Sam identyfikator DOI, bez przedrostka https://doi.org/.
       - name: if
         label: IF (impact factor, opcjonalnie)
         type: string
+        description: Wartość Impact Factor; zero nie jest wyświetlane.
       - name: uwagi
-        label: Uwagi (np. język
-        „w druku”): null
+        label: Uwagi (np. język, „w druku”)
         type: string
+        description: Dodatkowa uwaga wyświetlana przy tym elemencie.
+      description: Publikacje w kolejności wyświetlania.
+    description: Grupy pozycji; kolejność jest taka sama jak na stronie.
 - name: strony
   label: Strony działu Nauka
-  description: 'Adres strony = ścieżka pliku, np. nauka/sukcesy/historia.md → /nauka/sukcesy/historia (nowe strony działu zakładaj w folderze nauka). Teksty stron z listą (tytuł, opis, hasło i tekst nad listą) to też strony: seminaria.md, nauka/konferencje.md, nauka/granty.md, nauka/sukcesy.md, nauka/publikacje.md. Brak takiej strony nic nie psuje — lista pokaże domyślny tytuł i hasło, bez tekstu.'
+  description: Strony informacyjne oraz teksty stron z listami. Adres wynika ze ścieżki pliku; nie zmieniaj nazw
+    istniejących plików. Nowe strony nie są dopisywane do menu.
   type: collection
   path: src/content/strony
   format: yaml-frontmatter
@@ -442,46 +584,42 @@ content:
   view:
     fields:
     - tytul
+    - status_publikacji
     primary: tytul
   fields:
   - name: tytul
     label: Tytuł
     type: string
     required: true
+    description: Nazwa strony lub wpisu, widoczna także na odpowiednich listach i w wynikach wyszukiwania.
+  - name: status_publikacji
+    label: Status publikacji
+    type: select
+    required: true
+    default: oficjalna
+    description: Zapisuje wybór do przyszłej publikacji. Obecnie nie zmienia widoczności. Podgląd jest publiczny.
+    options:
+      values:
+      - name: oficjalna
+        label: Opublikowana — strona oficjalna i podgląd
+      - name: podglad
+        label: Tylko podgląd
   - name: body
     label: Treść
     type: rich-text
     options:
       format: markdown
       path: public/pliki/nauka
-    description: |-
-      Piszesz jak w zwykłym edytorze; akapity oddziela Enter. Nagłówek 2 = nowa sekcja (pojawi się w spisie „Na tej stronie”).
-
-      Gdy włączone jest pole „Bloki” (niżej), kilka układów strona rozpoznaje sama:
-
-      • Punkt listy zaczynający się pogrubieniem = kafelek.
-
-      • Lista numerowana z pogrubionym początkiem = oś kroków.
-
-      • Punkt z rolą kursywą i nazwiskiem pogrubionym = kontakt.
-
-      • Lista samych linków = lista plików (PDF / strona).
-
-      • Nagłówek 3 zakończony znakiem „?” = rozwijane pytanie.
-
-      • Tekst nad listą (Seminaria, Konferencje, Aktualności…): lista stoi pod całym tekstem, chyba że jest kotwica — np. na stronie Publikacje tekst pod nagłówkiem 2 „Czasopisma redagowane w Instytucie” stoi nad listą czasopism.
-
-      • Plik PDF: wgraj w „Media” i wklej link.
-
-      • Akapit zaczynający się od dwuliterowego skrótu z kropką („Np.”, „Dr.”, „No.”) edytor zapisze jako listę numerowaną „1.” — zacznij akapit inaczej albo pogrub skrót.
-
-      Więcej: ściągawka edytora (dok/sciagawka-edytora.md w Web-Core).
+    description: Tekst strony; nagłówek 2 tworzy sekcję. Opcja Bloki włącza układy cech, etapów, kontaktów, plików
+      i pytań z list w tekście.
   - name: tytul_en
     label: Tytuł EN
     type: string
+    description: Angielska wersja pola Tytuł; puste oznacza użycie wersji polskiej.
   - name: tresc_en
     label: Treść EN
-    description: Cała strona po angielsku, w tym samym układzie co Treść (nagłówki sekcji po angielsku). Puste = strona angielska pokaże treść polską.
+    description: Tekst strony po angielsku; puste oznacza wyświetlanie tekstu polskiego. Układ treści jest taki
+      sam jak w polskim opisie.
     type: rich-text
     options:
       format: markdown
@@ -489,43 +627,54 @@ content:
   - name: opis
     label: Krótki opis (pod tytułem i w Google)
     type: text
+    description: Opis strony do wyszukiwarek i udostępniania linku.
   - name: opis_en
     label: 'EN: opis'
     type: text
+    description: Angielska wersja pola Krótki opis (pod tytułem i w Google); puste oznacza użycie wersji polskiej.
   - name: haslo
-    label: Hasło na banerze (jedna linia; liczby w banerze pokażą się tylko razem z hasłem)
+    label: Hasło w nagłówku
     type: string
+    description: Krótkie hasło w nagłówku, widoczne razem z liczbami. Na okładce działu służy również jako podpis.
   - name: haslo_en
     label: 'EN: hasło na banerze'
     type: string
+    description: Angielskie hasło; puste pole nie zastępuje go polskim hasłem.
   - name: haslo_podstron
     label: Hasło na banerze stron pojedynczych wpisów (tylko Publikacje — rocznik, i Obrony doktorskie — obrona)
     type: string
+    description: Hasło na stronach pojedynczych obron lub roczników publikacji, zamiast hasła listy.
   - name: haslo_podstron_en
     label: 'EN: hasło stron pojedynczych wpisów'
     type: string
+    description: Angielskie hasło; puste pole nie zastępuje go polskim hasłem.
   - name: liczby
     label: Liczby pod hasłem na banerze (tylko gdy nie da się ich policzyć z danych)
     type: object
     list:
       collapsible:
         collapsed: true
-        summary: "{n} {etykieta}"
+        summary: '{n} {etykieta}'
     fields:
     - name: n
       label: Liczba (np. 8 albo 3 lata)
       type: string
       required: true
+      description: Wartość w nagłówku, np. 8 albo 3 lata.
     - name: n_en
       label: 'EN: liczba (puste = jak po polsku)'
       type: string
+      description: Angielska wersja pola Liczba (np. 8 albo 3 lata); puste oznacza użycie wersji polskiej.
     - name: etykieta
       label: Podpis
       type: string
       required: true
+      description: Napis wyświetlany przy tej pozycji.
     - name: etykieta_en
       label: 'EN: podpis'
       type: string
+      description: Angielska wersja pola Podpis; puste oznacza użycie wersji polskiej.
+    description: Wartości i podpisy w nagłówku. Nie powtarzaj danych, które dana strona oblicza samodzielnie.
   - name: pasek_boczny
     label: 'Prawy pasek: spis „Na tej stronie”, menu działu czy oba (puste = domyślnie tylko spis)'
     type: select
@@ -539,8 +688,16 @@ content:
         label: Tylko menu działu (podstrony)
       - name: brak
         label: Bez prawego paska (strona na całą szerokość)
+    description: Spis sekcji jest widoczny przy opcji Spis lub Oba. Menu i Brak wyłączają spis; ta wersja strony
+      nie wyświetla bocznego menu działu.
   - name: bloki
     label: Kafelki, oś i kontakty z list — zob. ściągawka
     type: boolean
     default: false
-    description: 'Włączone: listy w treści stają się blokami (kafelki, oś kroków, kontakty, lista plików, rozwijane pytania) — opis przy polu „Treść”. Wyłączone: zwykłe listy.'
+    description: 'Włącz, aby z list w tekście powstawały bloki treści: cechy, etapy, kontakty, pliki i pytania.'
+  - name: opublikowany
+    label: Dotychczasowe uwzględnianie w zestawieniach
+    type: boolean
+    hidden: true
+    default: true
+    description: Zachowuje dotychczasową widoczność w zestawieniach i indeksowanie. To osobna opcja od statusu publikacji.

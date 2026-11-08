@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "7th International Conference on Lévy Processes: Theory and Applications"
 poczatek: "2013-07-15"
 koniec: "2013-07-19"

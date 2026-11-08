@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Stochastic Models VI"
 poczatek: "2018-06-03"
 koniec: "2018-06-08"

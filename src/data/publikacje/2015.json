@@ -1,9 +1,6 @@
 {
   "rok": 2015,
   "pochodzenie": "pdf",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/sites/default/files/publikacje_2015.pdf"
-  ],
   "grupy": [
     {
       "prace": [
@@ -525,5 +522,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

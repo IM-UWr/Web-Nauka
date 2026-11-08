@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Probability and Analysis 2024"
 poczatek: "2024-04-22"
 koniec: "2024-04-26"

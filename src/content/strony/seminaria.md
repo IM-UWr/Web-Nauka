@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: Seminaria
 tytul_en: Seminars
 tresc_en: |-

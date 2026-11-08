@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Stochastic Models VII"
 poczatek: "2023-05-29"
 koniec: "2023-06-02"

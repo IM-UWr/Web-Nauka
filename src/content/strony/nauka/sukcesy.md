@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: Sukcesy
 tytul_en: Achievements
 tresc_en: |-

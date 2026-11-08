@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "Stochastic Networks and Risk Analysis IV"
 poczatek: "2014-05-27"
 koniec: "2014-06-01"

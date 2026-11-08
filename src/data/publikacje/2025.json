@@ -1,9 +1,6 @@
 {
   "rok": 2025,
   "pochodzenie": "pdf",
-  "zrodla": [
-    "https://www.math.uni.wroc.pl/sites/default/files/publikacje_2025.pdf"
-  ],
   "grupy": [
     {
       "prace": [
@@ -432,5 +429,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status_publikacji": "oficjalna"
 }

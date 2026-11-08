@@ -1,4 +1,5 @@
 ---
+status_publikacji: oficjalna
 tytul: "International Quantitative Linguistics Conference QUALICO 2018"
 poczatek: "2018-07-05"
 koniec: "2018-07-08"
