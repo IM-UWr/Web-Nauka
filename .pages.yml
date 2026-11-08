@@ -45,19 +45,17 @@ content:
       • Akapit zaczynający się od dwuliterowego skrótu z kropką („Np.”, „Dr.”, „No.”) edytor zapisze jako listę numerowaną „1.” — zacznij akapit inaczej albo pogrub skrót.
 
       Więcej: ściągawka edytora (dok/sciagawka-edytora.md w Web-Core).
-    type: rich-text
+    type: code
     options:
       format: markdown
-      path: public/pliki/nauka
   - name: tytul_en
     label: Tytuł EN
     type: string
   - name: tresc_en
     label: Treść EN
-    type: rich-text
+    type: code
     options:
       format: markdown
-      path: public/pliki/nauka
     description: Tekst „Badania w Instytucie” po angielsku, w tym samym układzie co Treść. Puste = strona angielska pokaże tekst polski.
   - name: wstep
     label: Wstęp pod tytułem (1–3 zdania)
@@ -128,10 +126,9 @@ content:
     type: string
   - name: body
     label: Opis (opcjonalnie)
-    type: rich-text
+    type: code
     options:
       format: markdown
-      path: public/pliki/konferencje
   - name: tytul_en
     label: 'EN: nazwa (jeśli inna)'
     type: string
@@ -219,7 +216,7 @@ content:
     type: number
   - name: body
     label: Opis projektu (opcjonalnie; pokazuje się na podstronie projektu pod danymi)
-    type: rich-text
+    type: code
     options:
       format: markdown
   - name: tytul_en
@@ -450,10 +447,9 @@ content:
     required: true
   - name: body
     label: Treść
-    type: rich-text
+    type: code
     options:
       format: markdown
-      path: public/pliki/nauka
     description: |-
       Piszesz jak w zwykłym edytorze; akapity oddziela Enter. Nagłówek 2 = nowa sekcja (pojawi się w spisie „Na tej stronie”).
 
@@ -482,10 +478,9 @@ content:
   - name: tresc_en
     label: Treść EN
     description: Cała strona po angielsku, w tym samym układzie co Treść (nagłówki sekcji po angielsku). Puste = strona angielska pokaże treść polską.
-    type: rich-text
+    type: code
     options:
       format: markdown
-      path: public/pliki/nauka
   - name: opis
     label: Krótki opis (pod tytułem i w Google)
     type: text
