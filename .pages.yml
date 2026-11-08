@@ -103,8 +103,10 @@ content:
     - poczatek
     - miejsce
     primary: tytul
-    sort: poczatek
-    order: desc
+    sort: [poczatek]
+    default:
+      sort: poczatek
+      order: desc
   fields:
   - name: tytul
     label: Nazwa konferencji
