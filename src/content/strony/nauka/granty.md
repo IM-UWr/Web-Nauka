@@ -1,5 +1,6 @@
 ---
 tytul: Projekty i granty
+opublikowany: true
 tytul_en: Research projects and grants
 tresc_en: |-
   Researchers at the Mathematical Institute pursue their own research ideas in projects carried out individually or in teams. Most of these projects are funded by the National Science Centre (NCN), the agency that supports basic research in Poland, through calls such as OPUS, SONATA, SONATA BIS and PRELUDIUM. Other projects have been funded by European Union programmes, including Marie Curie actions, by other international programmes and from internal funds.

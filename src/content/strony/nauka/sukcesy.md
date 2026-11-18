@@ -1,5 +1,6 @@
 ---
 tytul: Sukcesy
+opublikowany: true
 tytul_en: Achievements
 tresc_en: |-
   This page gathers news of achievements by people connected with the Institute — staff, doctoral students and students — at every stage of an academic career, from first theses to many years of research. They include prizes and awards from scientific societies and institutions, grants from the National Science Centre (NCN) and other funding bodies, scholarships, conferrals of the title of professor and elections to academies of sciences, as well as the results of student and thesis competitions. The entries are arranged by year.

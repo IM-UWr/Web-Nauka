@@ -1,5 +1,6 @@
 ---
 tytul: Seminaria
+opublikowany: true
 tytul_en: Seminars
 tresc_en: |-
   Research seminars are a regular part of academic life at the Institute: this is where new results and work in progress are presented and discussed. Each research department runs its own seminar, which meets regularly during the academic year. Talks are given by members of staff and doctoral students of the Institute, as well as by visitors from other institutions in Poland and abroad, in Polish or in English.

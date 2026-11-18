@@ -1,5 +1,6 @@
 ---
 tytul: Nauka
+opublikowany: true
 tytul_en: Research
 tresc_en: >-
   Three departments work where logic, algebra, topology and geometry meet. The

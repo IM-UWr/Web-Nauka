@@ -1,5 +1,6 @@
 ---
 tytul: Publikacje
+opublikowany: true
 tytul_en: Publications
 tresc_en: |-
   The lists on this page cover publications by members of the Institute from 2003 onwards, more than two thousand entries in all. Most are articles in peer-reviewed journals, but there are also monographs, book chapters, and teaching, outreach and historical writing, published for instance in Matematyka and Wiadomości Matematyczne. Entries usually give the authors, title and source, and for some years also the journal's impact factor (IF) or the DOI.

@@ -1,5 +1,6 @@
 ---
 tytul: Konferencje
+opublikowany: true
 tytul_en: Conferences
 tresc_en: |-
   The Institute's research departments organise and co-organise conferences, workshops and schools that bring together mathematicians from Poland and abroad. Their topics reflect the research carried out at the Institute, from pure mathematics to its applications. The meetings take place in Wrocław and at conference centres elsewhere in Poland and abroad, and some of them are recurring events held in successive editions.
