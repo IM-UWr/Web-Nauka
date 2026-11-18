@@ -1,6 +1,7 @@
 # Pages CMS — Web-Nauka: Nauka: konferencje, projekty i granty, publikacje, sukcesy.
 # Wygenerowane przy migracji z Avean/IM-Website-test; pola „Opublikowany” usunięte (bez wersji roboczych).
 # Zlecenie 33: pole „Opublikowane” wróciło w Stronach i na stronie działu (odznaczone = szkic, widoczny tylko na Podglądzie).
+# Zlecenie 40: Strony i strona działu w jawnym Markdownie (ukryte format_tresci), ściągawki przy Treści, pola EN pod polskimi, opisy formularzy, szablony Treści konferencji i projektu; konferencja z opisem ma własną stronę.
 media:
   input: public/pliki
   output: /pliki
@@ -11,7 +12,7 @@ settings:
 content:
 - name: strona-dzialu
   label: Strona działu Nauka
-  description: 'Strona /nauka: tytuł i tekst „Badania w Instytucie” (po polsku i po angielsku), niżej drobne pola — tekst pod tytułem, hasło i „W skrócie”. Liczby, kafelki (z menu „Nauka”), zakłady, konferencje, granty i obrony budują się same z danych.'
+  description: 'Strona /nauka: tytuł i tekst „Badania w Instytucie” (po polsku i po angielsku), niżej drobne pola — opis strony dla Google, hasło i „W skrócie”. Liczby, kafelki (z menu „Nauka”), zakłady, konferencje, granty i obrony budują się same z danych.'
   type: file
   path: src/data/nauka.md
   format: yaml-frontmatter
@@ -20,6 +21,9 @@ content:
     label: Tytuł
     type: string
     required: true
+  - name: tytul_en
+    label: Tytuł EN
+    type: string
   - name: opublikowany
     label: Opublikowane — widoczne na stronie publicznej (na Podglądzie widać zawsze)
     description: Odznacz, żeby przygotować stronę bez pokazywania jej na stronie publicznej (szkic)
@@ -28,49 +32,31 @@ content:
   - name: body
     label: Treść
     description: |-
-      Tekst sekcji „Badania w Instytucie” (pierwszy akapit strona pokazuje większą czcionką).
-
-      Piszesz jak w zwykłym edytorze; akapity oddziela Enter. Nagłówek 2 = nowa sekcja (pojawi się w spisie „Na tej stronie”).
-
-      Kilka układów strona rozpoznaje sama:
-
-      • Punkt listy zaczynający się pogrubieniem = kafelek.
-
-      • Lista numerowana z pogrubionym początkiem = oś kroków.
-
-      • Punkt z rolą kursywą i nazwiskiem pogrubionym = kontakt.
-
-      • Lista samych linków = lista plików (PDF / strona).
-
-      • Nagłówek 3 zakończony znakiem „?” = rozwijane pytanie.
-
-      • Tekst nad listą (Seminaria, Konferencje, Aktualności…): lista stoi pod całym tekstem, chyba że jest kotwica — np. na stronie Publikacje tekst pod nagłówkiem 2 „Czasopisma redagowane w Instytucie” stoi nad listą czasopism.
-
-      • Plik PDF: wgraj w „Media” i wklej link.
-
-      • Akapit zaczynający się od dwuliterowego skrótu z kropką („Np.”, „Dr.”, „No.”) edytor zapisze jako listę numerowaną „1.” — zacznij akapit inaczej albo pogrub skrót.
-
-      Więcej: ściągawka edytora (dok/sciagawka-edytora.md w Web-Core).
+      Jawny Markdown: ## rozpoczyna sekcję i pozycję spisu; {#id} zachowuje adres sekcji. Zwykły tekst jest prozą domyślnie; nie wymaga otaczających znaczników. Specjalne układy wymagają znaczników, np. :::kafelki, :::etapy, :::zakladki. Komentarze <!-- … --> objaśniają bloki; na stronie ich nie widać. Zachowaj pasujące końcowe dwukropki. Plik PDF: wgraj w „Media” i wklej link. Wygląd sprawdzaj po przebudowaniu strony (Podgląd). To tekst sekcji „Badania w Instytucie”; pierwszy akapit strona pokazuje większą czcionką.
     type: code
     options:
       format: markdown
-  - name: tytul_en
-    label: Tytuł EN
-    type: string
   - name: tresc_en
     label: Treść EN
     type: code
     options:
       format: markdown
-    description: Tekst „Badania w Instytucie” po angielsku, w tym samym układzie co Treść. Puste = strona angielska pokaże tekst polski.
+    description: "Jawny Markdown: ## rozpoczyna sekcję i pozycję spisu; {#id} zachowuje adres sekcji. Zwykły tekst jest prozą domyślnie; nie wymaga otaczających znaczników. Specjalne układy wymagają znaczników, np. :::kafelki, :::etapy, :::zakladki. Komentarze <!-- … --> objaśniają bloki; na stronie ich nie widać. Zachowaj pasujące końcowe dwukropki. Plik PDF: wgraj w „Media” i wklej link. Wygląd sprawdzaj po przebudowaniu strony (Podgląd). Tekst „Badania w Instytucie” po angielsku. Puste = strona angielska pokaże tekst polski."
+  - name: format_tresci
+    label: Format treści
+    type: string
+    hidden: true
+    default: jawne
   - name: wstep
-    label: Wstęp pod tytułem (1–3 zdania)
+    label: Opis strony dla Google (1–2 zdania)
+    description: Trafia do Google i do podglądu linku; na samej stronie się nie wyświetla. Np. „Badania w ośmiu zakładach naukowych Instytutu…”. Puste = ogólny opis serwisu.
     type: text
   - name: wstep_en
-    label: 'EN: wstęp'
+    label: 'EN: opis strony dla Google'
     type: text
   - name: haslo
     label: Hasło na banerze (jedna linia; liczby w banerze pokażą się tylko razem z hasłem)
+    description: Np. „Poznaj nasze badania na A+”. Puste = hasło domyślne działu.
     type: string
   - name: haslo_en
     label: 'EN: hasło na banerze'
@@ -101,6 +87,7 @@ content:
       hidden: true
 - name: konferencje
   label: Konferencje
+  description: Konferencje i warsztaty Instytutu. Lista w Nauce → Konferencje (nadchodzące i według lat). Konferencja z opisem ma własną stronę; bez opisu link prowadzi od razu na jej stronę internetową.
   type: collection
   path: src/content/konferencje
   format: yaml-frontmatter
@@ -121,6 +108,9 @@ content:
     label: Nazwa konferencji
     type: string
     required: true
+  - name: tytul_en
+    label: 'EN: nazwa (jeśli inna)'
+    type: string
   - name: poczatek
     label: Początek
     type: date
@@ -137,13 +127,15 @@ content:
     label: Miejsce (np. Wrocław, Będlewo)
     type: string
   - name: body
-    label: Opis (opcjonalnie)
+    label: Opis (opcjonalnie; konferencja z opisem ma własną stronę)
+    description: "Zwykły Markdown: akapity oddziela pusta linia; **pogrubienie**, *kursywa*, [tekst linku](https://…); lista: „- ” na początku linii; ## = nagłówek sekcji. Plik PDF: wgraj w „Media” i wklej link. Komentarze <!-- … --> to podpowiedzi; na stronie ich nie widać. Pusta Treść (albo sam komentarz) = konferencja bez własnej strony; link prowadzi wtedy na jej stronę internetową."
     type: code
     options:
       format: markdown
-  - name: tytul_en
-    label: 'EN: nazwa (jeśli inna)'
-    type: string
+    default: |-
+      <!-- TEKST: Zwykły tekst. Akapity oddziela pusta linia. Pliki: wgraj w „Media” i wklej link. -->
+      <!-- Rejestracja, program, plakat: wstaw link w osobnej linii. -->
+      <!-- Program, rejestracja, opłaty: każda informacja w osobnym akapicie. -->
   - name: strona
     label: Strona internetowa konferencji
     type: string
@@ -186,6 +178,7 @@ content:
     default: false
 - name: granty
   label: Projekty i granty
+  description: Projekty badawcze pracowników. Lista w Nauce → Projekty i granty; każdy projekt ma własną stronę z danymi, opis pokazuje się pod nimi.
   type: collection
   path: src/content/granty
   format: yaml-frontmatter
@@ -205,6 +198,9 @@ content:
     label: Tytuł projektu
     type: string
     required: true
+  - name: tytul_en
+    label: 'EN: tytuł'
+    type: string
   - name: rodzaj
     label: Źródło finansowania
     type: select
@@ -227,12 +223,11 @@ content:
     type: number
   - name: body
     label: Opis projektu (opcjonalnie; pokazuje się na podstronie projektu pod danymi)
+    description: "Zwykły Markdown: akapity oddziela pusta linia; **pogrubienie**, *kursywa*, [tekst linku](https://…); lista: „- ” na początku linii; ## = nagłówek sekcji. Plik PDF: wgraj w „Media” i wklej link. Komentarze <!-- … --> to podpowiedzi; na stronie ich nie widać. Pusta Treść (albo sam komentarz) = strona projektu pokaże same dane."
     type: code
     options:
       format: markdown
-  - name: tytul_en
-    label: 'EN: tytuł'
-    type: string
+    default: "<!-- OPIS PROJEKTU: Cel i wyniki projektu. Pusta Treść = strona projektu pokaże same dane. -->"
   - name: kod
     label: Numer (np. 2024/53/N/ST1/02294)
     type: string
@@ -447,7 +442,7 @@ content:
         type: string
 - name: strony
   label: Strony działu Nauka
-  description: 'Adres strony = ścieżka pliku, np. nauka/sukcesy/historia.md → /nauka/sukcesy/historia (nowe strony działu zakładaj w folderze nauka). Teksty stron z listą (tytuł, opis, hasło i tekst nad listą) to też strony: seminaria.md, nauka/konferencje.md, nauka/granty.md, nauka/sukcesy.md, nauka/publikacje.md. Brak takiej strony nic nie psuje — lista pokaże domyślny tytuł i hasło, bez tekstu.'
+  description: 'Adres strony = ścieżka pliku, np. nauka/sukcesy/historia.md → /nauka/sukcesy/historia (nowe strony działu zakładaj w folderze nauka). Teksty stron z listą (tytuł, opis, hasło i tekst nad listą) to też strony: seminaria.md, nauka/konferencje.md, nauka/granty.md, nauka/sukcesy.md, nauka/publikacje.md. Brak takiej strony nic nie psuje — lista pokaże domyślny tytuł i hasło, bez tekstu. Treść w jawnym Markdownie, jak w Studiach.'
   type: collection
   path: src/content/strony
   format: yaml-frontmatter
@@ -462,6 +457,9 @@ content:
     label: Tytuł
     type: string
     required: true
+  - name: tytul_en
+    label: Tytuł EN
+    type: string
   - name: opublikowany
     label: Opublikowane — widoczne na stronie publicznej (na Podglądzie widać zawsze)
     description: Odznacz, żeby przygotować stronę bez pokazywania jej na stronie publicznej (szkic)
@@ -473,38 +471,21 @@ content:
     options:
       format: markdown
     description: |-
-      Piszesz jak w zwykłym edytorze; akapity oddziela Enter. Nagłówek 2 = nowa sekcja (pojawi się w spisie „Na tej stronie”).
-
-      Gdy włączone jest pole „Bloki” (niżej), kilka układów strona rozpoznaje sama:
-
-      • Punkt listy zaczynający się pogrubieniem = kafelek.
-
-      • Lista numerowana z pogrubionym początkiem = oś kroków.
-
-      • Punkt z rolą kursywą i nazwiskiem pogrubionym = kontakt.
-
-      • Lista samych linków = lista plików (PDF / strona).
-
-      • Nagłówek 3 zakończony znakiem „?” = rozwijane pytanie.
-
-      • Tekst nad listą (Seminaria, Konferencje, Aktualności…): lista stoi pod całym tekstem, chyba że jest kotwica — np. na stronie Publikacje tekst pod nagłówkiem 2 „Czasopisma redagowane w Instytucie” stoi nad listą czasopism.
-
-      • Plik PDF: wgraj w „Media” i wklej link.
-
-      • Akapit zaczynający się od dwuliterowego skrótu z kropką („Np.”, „Dr.”, „No.”) edytor zapisze jako listę numerowaną „1.” — zacznij akapit inaczej albo pogrub skrót.
-
-      Więcej: ściągawka edytora (dok/sciagawka-edytora.md w Web-Core).
-  - name: tytul_en
-    label: Tytuł EN
-    type: string
+      Jawny Markdown: ## rozpoczyna sekcję i pozycję spisu; {#id} zachowuje adres sekcji. Zwykły tekst jest prozą domyślnie; nie wymaga otaczających znaczników. Specjalne układy wymagają znaczników, np. :::kafelki, :::etapy, :::zakladki. Komentarze <!-- … --> objaśniają bloki; na stronie ich nie widać. Zachowaj pasujące końcowe dwukropki. Plik PDF: wgraj w „Media” i wklej link. Wygląd sprawdzaj po przebudowaniu strony (Podgląd). Strona z listą (Konferencje, Projekty i granty, Sukcesy, Publikacje): tekst stoi nad listą. Na stronie Publikacje część pod „## Czasopisma redagowane w Instytucie {#czasopisma}” stoi nad listą czasopism (bez tego nagłówka czasopisma są bez tekstu).
   - name: tresc_en
     label: Treść EN
-    description: Cała strona po angielsku, w tym samym układzie co Treść (nagłówki sekcji po angielsku). Puste = strona angielska pokaże treść polską.
+    description: "Jawny Markdown: ## rozpoczyna sekcję i pozycję spisu; {#id} zachowuje adres sekcji. Zwykły tekst jest prozą domyślnie; nie wymaga otaczających znaczników. Specjalne układy wymagają znaczników, np. :::kafelki, :::etapy, :::zakladki. Komentarze <!-- … --> objaśniają bloki; na stronie ich nie widać. Zachowaj pasujące końcowe dwukropki. Plik PDF: wgraj w „Media” i wklej link. Wygląd sprawdzaj po przebudowaniu strony (Podgląd). Puste = strona angielska pokaże treść polską. Na stronie Publikacje tekst nad czasopismami pod nagłówkiem z {#czasopisma}."
     type: code
     options:
       format: markdown
+  - name: format_tresci
+    label: Format treści
+    type: string
+    hidden: true
+    default: jawne
   - name: opis
-    label: Krótki opis (pod tytułem i w Google)
+    label: Krótki opis (Google i podgląd linku)
+    description: Na samej stronie się nie wyświetla (baner pokazuje tytuł i hasło). Np. „Wykazy publikacji pracowników Instytutu według roku wydania…”. Puste = opis domyślny.
     type: text
   - name: opis_en
     label: 'EN: opis'
@@ -564,3 +545,4 @@ content:
     type: boolean
     default: false
     description: 'Włączone: listy w treści stają się blokami (kafelki, oś kroków, kontakty, lista plików, rozwijane pytania) — opis przy polu „Treść”. Wyłączone: zwykłe listy.'
+    hidden: true

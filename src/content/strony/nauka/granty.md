@@ -3,6 +3,8 @@ tytul: Projekty i granty
 opublikowany: true
 tytul_en: Research projects and grants
 tresc_en: |-
+  <!-- UKŁAD JAWNY: ## rozpoczyna sekcję w spisie. Nazwę można zmieniać; {#id} zachowuje adres. Bloki :::nazwa … ::: sterują wyglądem; komentarze są tylko instrukcjami dla redaktora. -->
+
   Researchers at the Mathematical Institute pursue their own research ideas in projects carried out individually or in teams. Most of these projects are funded by the National Science Centre (NCN), the agency that supports basic research in Poland, through calls such as OPUS, SONATA, SONATA BIS and PRELUDIUM. Other projects have been funded by European Union programmes, including Marie Curie actions, by other international programmes and from internal funds.
 
   The list covers projects from all the Institute's research departments, and their topics are as broad as our research: from model theory and geometric group theory, through Banach spaces, harmonic analysis and parabolic equations, to stochastic processes and statistics with applications in biology. They are led by established professors and early-career researchers alike, and doctoral students win PRELUDIUM grants for projects of their own. Some projects are the result of collaboration with partners abroad.
@@ -12,7 +14,9 @@ opis: Projekty badawcze realizowane w Instytucie Matematycznym, finansowane prze
 opis_en: Research projects carried out at the Mathematical Institute, funded by the National Science Centre (NCN), EU programmes and other sources.
 haslo: Projekty NCN, unijne i inne
 haslo_en: NCN, EU and other projects
+format_tresci: jawne
 ---
+<!-- UKŁAD JAWNY: ## rozpoczyna sekcję w spisie. Nazwę można zmieniać; {#id} zachowuje adres. Bloki :::nazwa … ::: sterują wyglądem; komentarze są tylko instrukcjami dla redaktora. -->
 
 Badacze Instytutu Matematycznego realizują projekty, w których rozwijają własne pomysły badawcze – indywidualnie albo w zespołach. Większość z nich finansuje Narodowe Centrum Nauki, agencja wspierająca w Polsce badania podstawowe, w konkursach takich jak OPUS, SONATA, SONATA BIS i PRELUDIUM. Finansowanie zapewniają też programy Unii Europejskiej, m.in. działania Marie Curie, inne programy międzynarodowe oraz środki wewnętrzne.
 

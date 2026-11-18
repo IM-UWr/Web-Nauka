@@ -16,9 +16,11 @@ liczby:
     etykieta: "najstarszy wpis"
     etykieta_en: "earliest entry"
 tresc_en: |
+  <!-- UKŁAD JAWNY: ## rozpoczyna sekcję w spisie. Nazwę można zmieniać; {#id} zachowuje adres. Bloki :::nazwa … ::: sterują wyglądem; komentarze są tylko instrukcjami dla redaktora. -->
+
   This overview was carried over from the previous website of the Institute and covers distinctions up to 2014. More recent achievements are listed on the [Achievements](/nauka/sukcesy) page.
 
-  ## Lectures and congresses
+  ## Lectures and congresses {#lectures-and-congresses}
 
   **International Congress of Mathematicians**
 
@@ -39,7 +41,7 @@ tresc_en: |
   - 1998 Kazimierz Urbanik,
   - 1993 Władysław Narkiewicz
 
-  ## Prizes and distinctions
+  ## Prizes and distinctions {#prizes-and-distinctions}
 
   **Foundation for Polish Science Prize in exact sciences – the “Polish Nobel”**
 
@@ -133,7 +135,7 @@ tresc_en: |
   - 1980 Edward Dobrowolski,
   - 1971 Janusz Charatonik
 
-  ## Prizes of the Polish Mathematical Society
+  ## Prizes of the Polish Mathematical Society {#prizes-of-the-polish-mathematical-society}
 
   **[Stefan Banach Prize](http://www.ptm.org.pl/kategorie/konkursy/nagrody-glowne-ptm/nagroda-glowna-ptm-im-stefana-banacha)**
 
@@ -229,7 +231,7 @@ tresc_en: |
   - 1957 Andrzej Hulanicki,
   - 1956 Stefan Paszkowski, Jan Mycielski
 
-  ## Scholarships
+  ## Scholarships {#scholarships}
 
   **Minister of Science and Higher Education scholarship for outstanding young researchers**
 
@@ -275,11 +277,13 @@ tresc_en: |
   - 2000 Jan Dymara,
   - 1994 Jacek Świątkowski
 opublikowany: true
+format_tresci: jawne
 ---
+<!-- UKŁAD JAWNY: ## rozpoczyna sekcję w spisie. Nazwę można zmieniać; {#id} zachowuje adres. Bloki :::nazwa … ::: sterują wyglądem; komentarze są tylko instrukcjami dla redaktora. -->
 
 Zestawienie przeniesione z poprzedniej strony internetowej Instytutu; obejmuje wyróżnienia do 2014 roku. Późniejsze sukcesy znajdziesz na stronie [Sukcesy](/nauka/sukcesy).
 
-## Wykłady i kongresy
+## Wykłady i kongresy {#wykłady-i-kongresy}
 
 **Międzynarodowy Kongres Matematyków**
 
@@ -300,7 +304,7 @@ Zestawienie przeniesione z poprzedniej strony internetowej Instytutu; obejmuje w
 - 1998 Kazimierz Urbanik,
 - 1993 Władysław Narkiewicz
 
-## Nagrody i wyróżnienia
+## Nagrody i wyróżnienia {#nagrody-i-wyróżnienia}
 
 **Nagroda Fundacji na rzecz Nauki Polskiej w dziedzinie nauk ścisłych – „Polski Nobel”**
 
@@ -394,7 +398,7 @@ Zestawienie przeniesione z poprzedniej strony internetowej Instytutu; obejmuje w
 - 1980 Edward Dobrowolski,
 - 1971 Janusz Charatonik
 
-## Nagrody Polskiego Towarzystwa Matematycznego
+## Nagrody Polskiego Towarzystwa Matematycznego {#nagrody-polskiego-towarzystwa-matematycznego}
 
 **[Nagroda im. Stefana Banacha](http://www.ptm.org.pl/kategorie/konkursy/nagrody-glowne-ptm/nagroda-glowna-ptm-im-stefana-banacha)**
 
@@ -490,7 +494,7 @@ Zestawienie przeniesione z poprzedniej strony internetowej Instytutu; obejmuje w
 - 1957 Andrzej Hulanicki,
 - 1956 Stefan Paszkowski, Jan Mycielski
 
-## Stypendia
+## Stypendia {#stypendia}
 
 **Stypendium Ministra Nauki i Szkolnictwa Wyższego dla wybitnych młodych naukowców**
 
