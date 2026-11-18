@@ -80,6 +80,7 @@ content:
     - name: wartosc
       label: Wartość (krótko, np. A+, 8, 1947)
       type: string
+      required: true
     - name: wartosc_en
       label: 'EN: wartość (puste = jak po polsku, np. liczby i lata)'
       type: string
@@ -89,6 +90,9 @@ content:
     - name: opis_en
       label: 'EN: opis'
       type: string
+    - name: pozycja
+      type: boolean
+      hidden: true
 - name: konferencje
   label: Konferencje
   type: collection
@@ -96,7 +100,6 @@ content:
   format: yaml-frontmatter
   filename:
     template: '{year}-{primary}.md'
-    field: create
   view:
     fields:
     - tytul
@@ -121,6 +124,7 @@ content:
   - name: koniec
     label: Koniec
     type: date
+    default: ""
     options:
       format: yyyy-MM-dd
   - name: miejsce
@@ -181,7 +185,6 @@ content:
   format: yaml-frontmatter
   filename:
     template: '{year}-{primary}.md'
-    field: create
   view:
     fields:
     - tytul
@@ -281,6 +284,9 @@ content:
     - name: uwagi_en
       label: 'EN: uwaga'
       type: string
+    - name: pozycja
+      type: boolean
+      hidden: true
   - name: czasopisma
     label: Czasopisma
     type: object
@@ -329,6 +335,9 @@ content:
     - name: adres
       label: Strona czasopisma (https://…)
       type: string
+    - name: pozycja
+      type: boolean
+      hidden: true
   - name: archiwum
     label: Uwaga pod czasopismami (np. o dawnych seriach)
     type: text
@@ -523,6 +532,9 @@ content:
     - name: etykieta_en
       label: 'EN: podpis'
       type: string
+    - name: pozycja
+      type: boolean
+      hidden: true
   - name: pasek_boczny
     label: 'Prawy pasek: spis „Na tej stronie”, menu działu czy oba (puste = domyślnie tylko spis)'
     type: select
