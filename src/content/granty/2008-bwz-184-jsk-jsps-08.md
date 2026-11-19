@@ -3,7 +3,8 @@ tytul: "Nieprzemienna analiza harmoniczna na strukturach dyskretnych z zastosowa
 tytul_en: "Noncommutative harmonic analysis on discrete structures with applications to probability"
 kod: "BWZ/184/JSK/JSPS/08"
 rodzaj: "ue"
-kierownik: "prof. Marek Bożejko"
+kierownik_ze_spisu:
+  - "_cms/pracownicy/marek-bozejko.yml"
 rok_od: 2008
 rok_do: 2009
 zaklad: "analiza-matematyczna"
